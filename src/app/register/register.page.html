@@ -1,0 +1,43 @@
+<!--<ion-header>
+  <ion-toolbar>
+    <ion-title>register</ion-title>
+  </ion-toolbar>
+</ion-header>-->
+
+<ion-content class="ion-padding">
+  <div class="registerform">
+    <h2 class="margin-bottom">Register Form</h2>
+
+    <ion-item lines="none" class="ion-no-padding textfield">
+      <ion-label position="stacked">Firstname :</ion-label>
+      <ion-input [(ngModel)]="Firstname" type="text" placeholder="Enter your firstname"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none" class="ion-no-padding textfield">
+      <ion-label position="stacked">Lastname :</ion-label>
+      <ion-input [(ngModel)]="Lastname" type="text" placeholder="Enter your lastname"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none" class="ion-no-padding textfield">
+      <ion-label position="stacked">Email :</ion-label>
+      <ion-input [(ngModel)]="Email" type="text" placeholder="Enter your email"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none" class="ion-no-padding textfield">
+      <ion-label position="stacked">Password :</ion-label>
+      <ion-input [(ngModel)]="Password" type="text" placeholder="Enter you password"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none" class="ion-no-padding textfield">
+      <ion-label position="stacked">Confirm :</ion-label>
+      <ion-input type="text" placeholder="Confirm your password"></ion-input>
+    </ion-item>
+
+    <ion-button (click)="OnSignUp()" expand="block" class="ion-margin-top"> Register</ion-button>
+
+    <div class="notaccount">
+      <ion-text class="ion-text-margin-right">Did you have an account ?</ion-text><a routerLink="/login">Login</a>
+    </div>
+  </div>
+
+</ion-content>
