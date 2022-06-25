@@ -28,7 +28,7 @@ export class UserService {
     if (email === 'migflor@gmail.com' && code === 'mimiflo') {
       this.router.navigateByUrl('/home');
     } else {
-      this.onShowAlert('Credentials incorrects');
+      this.onShowAlert("Credentails incorrects !!");
     }
   }
   Register(nom: string, prenom: string, mail: string, code: string,) {
@@ -46,7 +46,7 @@ export class UserService {
 
   async onShowAlert(message: string) {
     const alert = await this.alertController.create({
-      header: "Information",
+      header: "Status",
       message: message,
       cssClass: "customAlert",
       buttons: ['OK']
