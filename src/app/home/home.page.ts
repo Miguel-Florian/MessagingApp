@@ -1,4 +1,6 @@
+import { UserService } from './../services/user/user.service';
 import { Component } from '@angular/core';
+import { User } from 'src/models/users.model';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  users: User[];
 
-  constructor() {}
+  constructor(private userService: UserService) {
+    this.users = this.userService.GetAllUsers();
+    console.log(this.users);
+  }
 
 }
