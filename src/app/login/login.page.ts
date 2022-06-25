@@ -13,7 +13,7 @@ export class LoginPage implements OnInit {
 
   constructor(private userService: UserService) { }
 
-  onSignIn() {
+  OnSignIn() {
     this.userService.Login(this.email, this.password);
   }
 
