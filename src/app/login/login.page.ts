@@ -1,4 +1,6 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 import { Component, OnInit } from '@angular/core';
+import { UserService } from './../services/user/user.service';
 
 @Component({
   selector: 'app-login',
@@ -6,8 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
+  email: string;
+  password: string;
 
-  constructor() { }
+  constructor(private userService: UserService) { }
+
+  onSignIn() {
+    this.userService.Login(this.email, this.password);
+  }
 
   ngOnInit() {
   }
