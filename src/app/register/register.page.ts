@@ -1,4 +1,4 @@
-import { RegisterService } from './../services/register/register.service';
+import { UserService } from './../services/user/user.service';
 /* eslint-disable @typescript-eslint/naming-convention */
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/models/users.model';
@@ -15,11 +15,10 @@ export class RegisterPage implements OnInit {
   Email = ' ';
   Password = ' ';
 
-  constructor(private connect: RegisterService) { }
+  constructor(private userService: UserService) { }
 
   OnSignUp() {
-    console.log('ok');
-    this.connect.onSignUp(this.Firstname, this.Lastname, this.Email, this.Password);
+    this.userService.Register(this.Firstname, this.Lastname, this.Email, this.Password);
   }
 
   ngOnInit() {
